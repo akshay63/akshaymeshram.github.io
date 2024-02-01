@@ -33,6 +33,7 @@ body {
   border-radius: 15px;
   position: relative;
   box-shadow: 0 5px 15px 3px #000;
+  max-width: 70%;
 }
 
 h1 {
@@ -48,8 +49,23 @@ p {
 
 .social-media {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  row-gap: 1rem;
+}
+
+.social-media div:first-child a {
+  color: #ebd9b4;
+  padding: 0.5rem;
+  border-radius: 10px;
+  transition: all 0.2s ease-in;
+}
+
+.social-media div:first-child a:hover {
+  color: darkslategray;
+  background: #ebd9b4;
+  text-decoration: none;
 }
 
 .social-media a:not(:last-child) {
