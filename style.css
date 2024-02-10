@@ -83,7 +83,7 @@ a {
 .social-media div:first-child a {
   color: #030637;
   background: #ebd9b4;
-  padding: 0.5rem;
+  padding: 0.5rem 0.8rem;
   border-radius: 6px;
   transition: all 0.2s ease-in;
 }
