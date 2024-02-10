@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
+/* CSS Reset, Base Styles */
 *,
 *::before,
 *::after {
@@ -27,15 +28,6 @@ body {
   font-size: 1rem;
 }
 
-.main-content {
-  background-color: #313131b3;
-  padding: 3rem;
-  border-radius: 15px;
-  position: relative;
-  box-shadow: 0 5px 15px 3px #000;
-  max-width: 70%;
-}
-
 h1 {
   color: #f9efdb;
   margin-bottom: 20px;
@@ -44,37 +36,28 @@ h1 {
 p {
   color: #ebd9b4;
   margin-bottom: 15px;
-  font-size: 1.2rem;
 }
 
-.social-media {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 1rem;
-}
-
-.social-media div:first-child a {
-  color: #ebd9b4;
-  padding: 0.5rem;
-  border-radius: 10px;
-  transition: all 0.2s ease-in;
-}
-
-.social-media div:first-child a:hover {
-  color: darkslategray;
-  background: #ebd9b4;
+a {
   text-decoration: none;
 }
 
-.social-media a:not(:last-child) {
-  margin-right: 1rem;
+/******** Main Styles ***********/
+
+/* Layout */
+
+.main-content {
+  background-color: #313131b3;
+  padding: 3rem;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 5px 15px 3px #000;
+  max-width: 70%;
+  width: 100%;
 }
 
-.social-media a:last-child img {
-  width: 38px;
-  height: 38px;
+.main-content p {
+  font-size: 1.2rem;
 }
 
 #bg-video {
@@ -85,4 +68,73 @@ p {
   width: 100vw;
   height: 100vh;
   z-index: -1;
+}
+
+/* Profile card */
+.social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.social-media div:first-child a {
+  color: #030637;
+  background: #ebd9b4;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease-in;
+}
+
+.social-media div:first-child a:hover {
+  background: #3c0753;
+  color: #ebd9b4;
+}
+
+.social-media a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.social-media .icon-hashnode,
+.social-media .icon-medium {
+  width: 35px;
+  height: 35px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 760px) {
+  .main-content {
+    max-width: 100%;
+  }
+
+  .social-media .main-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.5rem;
+  }
+
+  .social-media .main-links a:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .social-media .social-links:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  body {
+    padding: 1rem;
+  }
+
+  .main-content {
+    padding: 2rem;
+  }
+
+  .main-content {
+    font-size: 1rem;
+  }
 }
